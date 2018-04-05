@@ -10,9 +10,8 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        use: {
-          loaders: ['eslint-loader', 'babel-loader'],
-        },
+        loader: 'babel-loader',
+        exclude: path.resolve(__dirname, 'node_modules'),
       },
     ],
   },
