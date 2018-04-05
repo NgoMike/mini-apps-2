@@ -1,45 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-
-const Home = () => (
-  <div>
-    <h2>Home</h2>
-  </div>
-);
-
-const AccountCreation = () => (
-  <div>
-    <h2>Form1: Account Creation</h2>
-  </div>
-);
-
-const ShippingAddress = () => (
-  <div>
-    <h2>Form2: Shipping Address</h2>
-  </div>
-);
-
-const BillingInfo = () => (
-  <div>
-    <h2>Form3: Billing Info</h2>
-  </div>
-);
-
-const Confirmation = () => (
-  <div>
-    <h2>Confirmation Summary</h2>
-  </div>
-);
+import AccountCreation from './accountCreation.jsx';
+import ShippingAddress from './shippingAddress.jsx';
+import BillingInfo from './billingInfo.jsx';
+import Confirmation from './confirmation.jsx';
+import Home from './home.jsx';
 
 const Routers = () => (
   <Router>
     <div>
       <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/AccountCreation">AccountCreation</Link></li>
-        <li><Link to="/ShippingAddress">ShippingAddress</Link></li>
-        <li><Link to="/BillingInfo">BillingInfo</Link></li>
-        <li><Link to="/Confirmation">Confirmation</Link></li>
+        <span><Link to="/">Home | </Link></span>
+        <span><Link to="/AccountCreation">AccountCreation | </Link></span>
+        <span><Link to="/ShippingAddress">ShippingAddress | </Link></span>
+        <span><Link to="/BillingInfo">BillingInfo | </Link></span>
+        <span><Link to="/Confirmation">Confirmation</Link></span>
       </ul>
 
       <hr />
