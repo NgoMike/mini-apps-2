@@ -11,9 +11,9 @@ const Routers = () => (
     <div>
       <ul>
         <span><Link to="/">Home | </Link></span>
-        <span><Link to="/AccountCreation">AccountCreation | </Link></span>
-        <span><Link to="/ShippingAddress">ShippingAddress | </Link></span>
-        <span><Link to="/BillingInfo">BillingInfo | </Link></span>
+        <span><Link to="/AccountCreation">Account Creation | </Link></span>
+        <span><Link to="/ShippingAddress">Shipping Address | </Link></span>
+        <span><Link to="/BillingInfo">Billing Info | </Link></span>
         <span><Link to="/Confirmation">Confirmation</Link></span>
       </ul>
 

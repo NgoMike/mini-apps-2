@@ -2,7 +2,7 @@ import React from 'react';
 
 const BillingInfo = () => (
   <div>
-    <h2>Form3: Billing Info</h2>
+    <h2>Form 3: Billing Info</h2>
     <form>
       <label>
         <div>
@@ -22,8 +22,9 @@ const BillingInfo = () => (
           <input type="text" name="zip" />
         </div>
       </label>
-      <input type="submit" value="Submit" />
+      <input type="submit" value="Next" />
     </form>
+    <button>Next</button>
   </div>
 );
 

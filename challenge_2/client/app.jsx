@@ -53,7 +53,3 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));
-
-
-
-  // <AccountCreation onChange={this.handleChange} />
