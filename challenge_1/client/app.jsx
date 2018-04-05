@@ -25,7 +25,6 @@ class App extends React.Component {
         this.setState({
           cryptoData: data,
         });
-        chartData.datasets[0].data = data;
       },
       error: (error) => {
         console.error(error);
@@ -36,7 +35,10 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h2>CryptoCoinsTracker</h2>
+        <h2>BitCoin Tracker</h2>
+         {this.state.cryptoData.map(price => {
+          chartData.datasets[0].data.push(price.priceClose);
+        })}
         <Line data={chartData} />
       </div>
     );

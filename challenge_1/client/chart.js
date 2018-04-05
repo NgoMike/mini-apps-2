@@ -2,7 +2,7 @@ module.exports.chartData = {
   labels: ['January', 'February', 'March'],
   datasets: [
     {
-      label: 'U.S. Dollars',
+      label: 'Closing Prices in USD',
       fill: false,
       lineTension: 0.1,
       backgroundColor: 'rgba(75,192,192,0.4)',
