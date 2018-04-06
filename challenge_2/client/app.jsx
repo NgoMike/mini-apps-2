@@ -1,55 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import $ from 'jquery';
-import Routers from './router.jsx';
-// import AccountCreation from './accountCreation.jsx';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import AccountCreation from './accountCreation.jsx';
+import ShippingAddress from './shippingAddress.jsx';
+import BillingInfo from './billingInfo.jsx';
+import Confirmation from './confirmation.jsx';
+import Home from './home.jsx';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: '',
-      value: '',
-    };
-    this.fetch = this.fetch.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  componentDidMount() {
-    this.fetch();
-  }
-
-  fetch() {
-    $.ajax({
-      url: '/shoppingCart',
-      method: 'GET',
-      success: (data) => {
-        this.setState({
-          data: data,
-        });
-      },
-    });
-  }
-
-  handleChange(event) {
-    this.setState({
-      value: event.target.value,
-    });
-  }
-
-  handleSubmit(event) {
-    event.preventDefault();
-  }
-
-  render() {
-    return (
+const App = () => (
+  <div>
+    <h1>Check It Out</h1>
+    <Router>
       <div>
-        <h1>Check It Out</h1>
-        <Routers />
+        <Route exact path="/" component={Home} />
+        <Route path="/Account" component={AccountCreation} />
+        <Route path="/Shipping" component={ShippingAddress} />
+        <Route path="/Billing" component={BillingInfo} />
+        <Route path="/Confirm" component={Confirmation} />
       </div>
-    );
-  }
-}
+    </Router>
+  </div>
+);
 
 ReactDOM.render(<App />, document.getElementById('app'));
+
+export default App;
