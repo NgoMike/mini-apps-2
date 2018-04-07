@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import GameBoard from './gameBoard.jsx';
 
 const makeBoard = (num) => {
   const board = [];
@@ -104,20 +105,13 @@ const minesProximity = (board) => {
   // [1,0] (0, -1),                             [1,2] (0, + 1)
   // [2,0] (+1, -1),      [2,1] (+1, 0) ,       [2,2] (+1, +1)
 
-
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      row: 0,
-      col: 0,
-      bombs: 0,
-      flags: 0,
+      data : minesProximity(mines(10)),
     };
   }
-
-
-
 
   render() {
     return (
@@ -125,11 +119,10 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">MineSweeper</h1>
-
         </header>
-          <div>Board</div>
-          <div className="Board">{mines(10)}</div>
-
+        <table className="Board">
+          <GameBoard rows={this.state.data} />
+        </table>
       </div>
     );
   }
