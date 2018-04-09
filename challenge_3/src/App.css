@@ -29,21 +29,40 @@
   to { transform: rotate(360deg); }
 }
 
+.NewGame {
+  margin-bottom: 20px;
+  font-size: 15px;
+  height: 35px;
+  width: 100px;
+  color: aqua;
+  background-color: black;
+}
+
+.NewGame:active {
+  background-color: navy;
+}
 
 .Board {
   border: 3px solid lightskyblue;
-  height: 250px;
+  height: 400px;
   width: 400px;
   margin: auto;
 }
 
 .square {
+  padding-top: 5px;
   color: blue;
   font-weight: bold;
   border: 2px solid lightskyblue;
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 15px;
+  background-color: lightskyblue;
+  /*text-indent: -9999px;*/
 }
 
+.square:active {
+  background-color: aqua;
+  text-indent: 0px;
+}
 
 
